@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Zword_01Class</class>
+ <widget class="QMainWindow" name="Zword_01Class">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>363</width>
+    <height>383</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ZWord</string>
+  </property>
+  <property name="styleSheet">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>6</y>
+      <width>121</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Sans Serif</family>
+      <pointsize>7</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>English-Indonesian</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonViewLang">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>6</y>
+      <width>45</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>(+)</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="TextResult">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>40</y>
+      <width>227</width>
+      <height>197</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ButtonTranslate">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>6</y>
+      <width>49</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Sans Serif</family>
+      <pointsize>7</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>240</y>
+      <width>357</width>
+      <height>109</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListView" name="listView">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>40</y>
+      <width>127</width>
+      <height>197</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>352</y>
+      <width>355</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>+zword</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonSetting">
+       <property name="text">
+        <string>+setting</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonNewLang">
+       <property name="text">
+        <string>+lang</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonAddNewWord">
+       <property name="text">
+        <string>+word</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLineEdit" name="TextInput">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>6</y>
+      <width>135</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>TranslateAction</string>
+   </property>
+   <property name="toolTip">
+    <string>test</string>
+   </property>
+  </action>
+  <action name="actionListItemClicked">
+   <property name="text">
+    <string>ListItemClicked</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="zword_01.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ButtonTranslate</sender>
+   <signal>clicked()</signal>
+   <receiver>action</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listView</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>actionListItemClicked</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>65</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

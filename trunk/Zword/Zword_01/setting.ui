@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrameSetting</class>
+ <widget class="QFrame" name="FrameSetting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>361</width>
+    <height>382</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Zword setting</string>
+  </property>
+  <property name="styleSheet">
+   <string>
+#FrameSetting QPushButton {
+color: #333;
+border: 2px solid #555;
+border-radius: 11px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+}
+#FrameSetting QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+#FrameSetting QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>12</y>
+     <width>341</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QCheckBox" name="CBMonitorClipBoard">
+      <property name="text">
+       <string>Monitor Clipboard</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="CBAlwaysOnTop">
+      <property name="text">
+       <string>Always On Top</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Application Style</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListView" name="ListViewStyle">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Transparancy</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSlider" name="SliderTransparancy">
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>99</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButtonClose">
+      <property name="text">
+       <string> Close</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

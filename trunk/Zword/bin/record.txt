@@ -1,0 +1,98 @@
+F:\Resource HTML\SqlLite>sqlite3 engina.db
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .quit
+
+F:\Resource HTML\SqlLite>sqlite3 engina.db
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .quit
+
+F:\Resource HTML\SqlLite>sqlite3 engina.db;
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> engina.db;
+Error: near "engina": syntax error
+sqlite> engina.db
+   ...> ;
+Error: near "engina": syntax error
+sqlite> .quit
+
+F:\Resource HTML\SqlLite>sqlite3 engina.db
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> ;
+sqlite> CREATE TABLE dataA(eng text,ina text);
+sqlite> .table
+dataA
+sqlite> CREATE TABLE dataB(eng text,ina text);
+sqlite> CREATE TABLE dataC(eng text,ina text);
+sqlite> CREATE TABLE dataD(eng text,ina text);
+sqlite> .table
+dataA  dataB  dataC  dataD
+sqlite> .schema dataA
+CREATE TABLE dataA(eng text,ina text);
+sqlite> INSERT INTO dataA(eng,ina) VALUES('again','again kk. 1 lagi, sekali lagi
+, kembali.It's nice to see you a. Senang sekali bertemu lagi dengan kamu.2 pula,
+ lagi.Try a. Coba lagi. 3 juga.');
+   ...> ;
+   ...> ;
+   ...> Error: incomplete SQL: INSERT INTO dataA(eng,ina) VALUES('again','again
+kk. 1 lagi, sekali lagi, kembali.It's nice to see you a. Senang sekali bertemu l
+agi dengan kamu.2 pula, lagi.Try a. Coba lagi. 3 juga.');
+;
+;
+^C
+F:\Resource HTML\SqlLite>sqlite3
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .table
+sqlite> .schema
+sqlite> engina.db
+   ...> ;
+Error: near "engina": syntax error
+sqlite>
+F:\Resource HTML\SqlLite>sqlite3 engina.db
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .table
+dataA  dataB  dataC  dataD
+sqlite> INSERT INTO dataA(eng,ina) VALUES('again','lagi, sekali lagi');
+sqlite> INSERT INTO dataA(eng,ina) VALUES('against','melawan');
+sqlite> INSERT INTO dataA(eng,ina) VALUES('agate','(batu) akik');
+sqlite> INSERT INTO dataB(eng,ina) VALUES('back','punggung,belakang');
+sqlite> INSERT INTO dataB(eng,ina) VALUES('backbiting','pengkhianatan');
+sqlite> INSERT INTO dataB(eng,ina) VALUES('bag','kantong,tas,koper');
+sqlite> INSERT INTO dataB(eng,ina) VALUES('ban','larangan');
+sqlite> INSERT INTO dataB(eng,ina) VALUES('bam','gudang');
+sqlite> INSERT INTO dataA(eng,ina) VALUES('adage','pepatah');
+sqlite> INSERT INTO dataA(eng,ina) VALUES('as','sebagai');
+sqlite> INSERT INTO dataA(eng,ina) VALUES('at','di,pada,atas');
+sqlite> select * from dataA;
+again|lagi, sekali lagi
+against|melawan
+agate|(batu) akik
+adage|pepatah
+as|sebagai
+at|di,pada,atas
+sqlite> select * from dataA where eng='a';
+sqlite> select * from dataA where eng='again';
+again|lagi, sekali lagi
+sqlite> select * from dataA where eng[0]='a';
+Error: near "[0]": syntax error
+sqlite> select * from dataA where eng like='a';
+Error: near "=": syntax error
+sqlite> select * from dataA where eng like 'a';
+sqlite> select * from dataA where eng like 'ag';
+sqlite> select * from dataA where eng like 'ag*';
+sqlite> select * from dataA where eng like 'ag%';
+again|lagi, sekali lagi
+against|melawan
+agate|(batu) akik
+sqlite>
